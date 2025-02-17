@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ContadorUpDown
-Fri Feb 14 14:59:10 2025
+Sun Feb 16 09:00:20 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,10 +36,10 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Feb 14 14:59:10 2025          ;
+; Analysis & Synthesis Status        ; Failed - Sun Feb 16 09:00:20 2025          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ContadorUpDown                             ;
-; Top-level Entity Name              ; ContadorUpDown                             ;
+; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone III                                ;
 ; Total logic elements               ; N/A until Partition Merge                  ;
 ;     Total combinational functions  ; N/A until Partition Merge                  ;
@@ -58,9 +58,8 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; ContadorUpDown     ; ContadorUpDown     ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Top-level entity name                                                      ; top                ; ContadorUpDown     ;
+; Family name                                                                ; Cyclone III        ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -145,15 +144,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 10          ;
+; Maximum allowed            ; 5           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -163,18 +162,16 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Feb 14 14:59:08 2025
+    Info: Processing started: Sun Feb 16 09:00:20 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ContadorUpDown -c ContadorUpDown
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file contadorupdown.bdf
-    Info (12023): Found entity 1: ContadorUpDown
-Info (12127): Elaborating entity "ContadorUpDown" for the top level hierarchy
-Warning (12158): Entity "ContadorUpDown" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4606 megabytes
-    Error: Processing ended: Fri Feb 14 14:59:10 2025
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (11104): Parallel Compilation has detected 10 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 5 of the 5 physical processors detected instead.
+Error (10170): Verilog HDL syntax error at top.v(4) near text ")";  expecting a direction File: C:/Users/primo/Documents/VerilogUpDownCounter/top.v Line: 4
+Error (10112): Ignored design unit "top" at top.v(1) due to previous errors File: C:/Users/primo/Documents/VerilogUpDownCounter/top.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file top.v
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 0 warnings
+    Error: Peak virtual memory: 4608 megabytes
+    Error: Processing ended: Sun Feb 16 09:00:20 2025
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
 
 

@@ -1,3 +1,45 @@
-|ContadorUpDown
+|top
+clk => clk.IN1
+rst => ~NO_FANOUT~
+seg[0] <= seven_seg_decoder:my_decoder.seg
+seg[1] <= seven_seg_decoder:my_decoder.seg
+seg[2] <= seven_seg_decoder:my_decoder.seg
+seg[3] <= seven_seg_decoder:my_decoder.seg
+seg[4] <= seven_seg_decoder:my_decoder.seg
+seg[5] <= seven_seg_decoder:my_decoder.seg
+seg[6] <= seven_seg_decoder:my_decoder.seg
+an[0] <= <GND>
+an[1] <= <VCC>
+an[2] <= <VCC>
+an[3] <= <VCC>
+
+
+|top|simple_counter:my_counter
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_seg_decoder:my_decoder
+binary_input[0] => Decoder0.IN3
+binary_input[1] => Decoder0.IN2
+binary_input[2] => Decoder0.IN1
+binary_input[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
